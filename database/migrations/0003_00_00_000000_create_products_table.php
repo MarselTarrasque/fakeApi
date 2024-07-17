@@ -28,20 +28,22 @@ return new class extends Migration
 
             $table->foreign('product_category_id')
                 ->references('id')
-                ->on('categories');
+                ->on('product_categories');
 
             $table->foreign('product_fabricator_id')
                 ->references('id')
-                ->on('fabricators');
+                ->on('product_fabricators');
 
             $table->foreign('product_taste_id')
                 ->references('id')
-                ->on('tastes');
+                ->on('product_tastes');
 
             $table->foreign('product_type_id')
                 ->references('id')
-                ->on('types');
+                ->on('product_types');
         });
+        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--class' => \Database\Seeders\ProductSeeder::class]);
+
     }
 
     /**

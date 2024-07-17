@@ -26,6 +26,12 @@ class ProductTasteSeeder extends Seeder
             [
                 'name' => 'Банан',
             ],
+            [
+                'name' => 'Булочка с корицей',
+            ],
+            [
+                'name' => 'Вишневый чизкейк',
+            ],
         ];
 
         foreach ($items as $item) {
